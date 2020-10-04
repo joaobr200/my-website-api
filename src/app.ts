@@ -2,17 +2,15 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 
+import routes from "./Routes";
+import userRoutes from "./Routes/users";
+
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
-app.get("/", (req, res) => {
-  res.json({ message: "Hello João Vitor" });
-});
-
-app.get("/hello", (req, res) => {
-  res.json({ message: "Hi, How are you ??" });
-});
+app.use("/", routes);
+app.use("/users", userRoutes);
 
 export { app };
