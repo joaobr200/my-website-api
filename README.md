@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./.ghitub/logo.svg" width="200" height="200">
+  <img src="./.github/logo.svg" width="200" height="200">
 </div>
 
 
